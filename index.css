@@ -82,7 +82,7 @@ header {
   transform: translateY(-50%);
   width: 55%;
   height: 120%;
-  background: url('/assets/img/network-graphic-overlay-banner-laptop.webp') center/cover no-repeat;
+  background: url('network-graphic-overlay-banner-laptop.webp') center/cover no-repeat;
   opacity: 0.38;
   border-radius: 40px;
 }
@@ -204,7 +204,7 @@ p {
   transform: translateY(-50%);
   width: 55%;
   height: 120%;
-  background: url('/assets/img/collage-customer-experience-concept.webp') center/cover no-repeat;
+  background: url('collage-customer-experience-concept.webp') center/cover no-repeat;
   opacity: 0.25;
   border-radius: 40px;
 }
