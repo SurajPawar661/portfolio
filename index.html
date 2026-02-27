@@ -50,31 +50,45 @@
 <section id="projects" class="reveal">
   <div class="container">
 <section id="key-engineering-projects">
-    <h2>Key Engineering Projects</h2>
-    <div class="grid grid-3">
-      <div class="card">
-        <h3>SPARC Embedded Module</h3>
-        <p>Designed modular embedded controller with power architecture and MCU subsystem for drone applications.</p>
-        <div class="tags"><span class="tag">PCB Design</span><span class="tag">Hardware</span></div>
-      </div>
-      <div class="card">
-        <h3>USB‑C UART Board</h3>
-        <p>2‑layer interface board designed in KiCad with schematic validation and routing constraints.</p>
-        <div class="tags"><span class="tag">Electronics</span></div>
-      </div>
-      <div class="card">
-        <h3>Drone Club Website</h3>
-        <p>Responsive platform showcasing club activities, projects, and competitions.</p>
-        <div class="tags"><span class="tag">Frontend</span></div>
-      </div>
-      <div class="card">
-        <h3>Edumocks UI</h3>
-        <p>Designed UI/UX layouts and user flow during internship project.</p>
-        <div class="tags"><span class="tag">UI/UX</span></div>
-      </div>
-    <div class="project-card">
-        <h3><a href="https://your-link-to-sparc-module.com" target="_blank">SPARC Embedded Module</a></h3>
+  <h2>Key Engineering Projects</h2>
+
+  <div class="grid grid-3">
+
+    <!-- SPARC PDF -->
+    <a href="assets/sparc.pdf" target="_blank" class="card project-link">
+      <h3>SPARC Embedded Module</h3>
+      <p>Designed modular embedded controller with power architecture and MCU subsystem for drone applications.</p>
+      <div class="tags"><span class="tag">PCB Design</span><span class="tag">Hardware</span></div>
+    </a>
+
+    <!-- UART PDF -->
+    <a href="assets/uart.pdf" target="_blank" class="card project-link">
+      <h3>USB-C UART Board</h3>
+      <p>2-layer interface board designed in KiCad with schematic validation and routing constraints.</p>
+      <div class="tags"><span class="tag">Electronics</span></div>
+    </a>
+
+    <!-- Drone Club -->
+    <a href="https://your-droneclub-link.com" target="_blank" class="card project-link">
+      <h3>Drone Club Website</h3>
+      <p>Responsive platform showcasing club activities, projects, and competitions.</p>
+      <div class="tags"><span class="tag">Frontend</span></div>
+    </a>
+
+    <!-- Edumocks -->
+    <a href="https://your-edumocks-link.com" target="_blank" class="card project-link">
+      <h3>Edumocks UI</h3>
+      <p>Designed UI/UX layouts and user flow during internship project.</p>
+      <div class="tags"><span class="tag">UI/UX</span></div>
+    </a>
+
+    <!-- MIRA -->
+    <div class="card project-link mira-card" id="miraCard">
+      <h3>MIRA: Linux based AI Co-Admin</h3>
+      <p>MIRA is your personal AI operating layer that brings automation, intelligence, and control into one unified system.</p>
+      <div class="tags"><span class="tag highlight">IN DEVELOPMENT</span></div>
     </div>
+
   </div>
 </section>
 
@@ -162,7 +176,7 @@
     </div>
   </div>
 </section>
-
+</section>    
 
 
 <footer>
@@ -171,6 +185,14 @@
 
   <a href="#contact" class="mobile-cta">Contact Me</a>
 
+<div id="miraModal" class="modal">
+  <div class="modal-content">
+    <span class="close-modal">&times;</span>
+    <h3>MIRA Project</h3>
+    <p>This project is currently in development. The codebase is not yet available on GitHub.</p>
+  </div>
+</div>
+  
   <script>
     const toggle = document.getElementById("menuToggle");
   const nav = document.getElementById("navLinks");
@@ -219,6 +241,25 @@
     const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
     const progress = (scrollTop / height) * 100;
     document.getElementById("progressBar").style.width = progress + "%";
+  });
+</script>
+  <script>
+  const miraCard = document.getElementById("miraCard");
+  const modal = document.getElementById("miraModal");
+  const closeModal = document.querySelector(".close-modal");
+
+  miraCard.addEventListener("click", () => {
+    modal.style.display = "block";
+  });
+
+  closeModal.addEventListener("click", () => {
+    modal.style.display = "none";
+  });
+
+  window.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.style.display = "none";
+    }
   });
 </script>
 </body>
